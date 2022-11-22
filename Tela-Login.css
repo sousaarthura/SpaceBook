@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    background-image: url("img/");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top, center;
+    background-color: #1b1f27;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #cbd0f7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: #6173fa 0px 0px 10px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:#181920;
+    height: 8vh;
+}
+main {
+    background: url(img/To\ the\ stars-cuate.png) no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    text-shadow: #6173fa 0px 0px 10px;
+}
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #5568fe;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.area-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181920;
+    border-radius: 8px;
+    width: 355px;
+    height: 320px;
+    padding: 35px;
+    box-shadow: 0px 10px 25px#14161b;
+}
+
+.login form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.login input{
+    margin-top: 10px;
+    background-color: #252a34;
+    padding-left: 10px;
+    color: #cbd0f7;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0px 10px 40px #14161b;
+    box-sizing: border-box;
+}
+.login img{
+    width: 110px;
+    height: auto;
+}
+
+.site img{
+    width: 40px;
+    height: auto;
+}
+
+input::placeholder{
+    color: #cbd0f7;
+    font-size: 14px;
+}
+
+form [type="submit"]{
+    display: block;
+    background-color: #5568fe;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 3px;
+    color: #1b1f27;
+    box-shadow: 0px 10px 40px -12px #6173fa;
+}
+
+p{
+    color: #cbd0f7;
+}
+
+a{
+    color: #5568fe;
+    text-decoration: none;
+    margin-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+}
+
+a::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #5568fe;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+@media screen and (max-height: 300px) {
+    ul{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #181920;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translate(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+.nav-list.active {
+    transform: translate(0%);
+}
+@keyframes navLinkFade { 
+    from{
+        opacity: 0;
+        transform:  translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .logo img{ 
+    width: 35px;
+    height: 35px;
+  }
+
+.img {
+    width: 500px;
+    margin-right:400px;
+
+}
